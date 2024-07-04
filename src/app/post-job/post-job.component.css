@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    text-align: right;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .profile-link {
+    background-image: url('/assets/profile.png');
+    background-size: 20px 20px; 
+    background-repeat: no-repeat;
+    padding-left: 25px;
+  }
+  
+  .settings-link {
+    background-image: url('/assets/settings.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+  }
+  
+  .logout-link {
+    background-image: url('/assets/logout.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+  }
+.recruiter-page {
+    background-image: url('/assets/int.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 100px); /* Adjust for header and footer height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.job-form {
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+    padding-right: 40px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],input[type="date"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#positionType {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+#positionType::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }

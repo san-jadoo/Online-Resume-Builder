@@ -1,0 +1,81 @@
+<div class="body">
+<div class="container" id="thecontent" *ngFor="let item of resumeData">
+  <div class="header">
+    <div class="full-name">{{ item.name }}</div>
+    <div class="contact-info">
+      <span class="email">Email: </span><span class="email-val">{{ item.email }}</span>
+      <span class="separator"></span>
+      <span class="phone">Phone: </span><span class="phone-val">{{ item.phone }}</span>
+    </div>
+    <div class="about">
+      <span class="position">About </span><span class="desc">{{ item.summary }}</span>
+    </div>
+  </div>
+  <div class="details">
+    <div class="section">
+      <div class="section__title">Experience</div>
+      <div class="section__list">
+        <div class="section__list-item">
+          <div class="name">{{ item.exp[1] }}</div>
+          <div class="addr">{{ item.exp[0] }}</div>
+          <div class="duration">{{ item.exp[3] }}</div>
+          <div class="duration">{{ item.exp[2] }}</div>
+        </div>
+        <div class="section__list-item">
+          <div class="name">{{ item.exp[5] }}</div>
+          <div class="addr">{{ item.exp[4] }}</div>
+          <div class="duration">{{ item.exp[7] }}</div>
+          <div class="duration">{{ item.exp[6] }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section__title">Education</div>
+      <div class="section__list">
+        <div class="section__list-item">
+          <div class="name">{{ item.education[0] }},{{ item.education[1] }}</div>
+          <div class="addr">{{ item.education[2] }}, {{ item.education[3] }}</div>
+          <div class="addr">{{ item.education[4] }}</div>
+        </div>
+        <div class="section__list-item">
+          <div class="name">{{ item.education[5] }},{{ item.education[6] }}</div>
+          <div class="addr">{{ item.education[7] }}, {{ item.education[8] }}</div>
+          <div class="addr">{{ item.education[9] }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section__title">Projects</div>
+      <div class="section__list">
+        <div class="section__list-item">
+          <div class="name">{{ item.proj[0] }} , {{ item.proj[1] }}</div>
+          <div class="text">{{ item.proj[2] }}</div>
+        </div>
+        <div class="section__list-item">
+          <div class="name">{{ item.proj[3] }} , {{ item.proj[4] }}</div>
+          <div class="text">{{ item.proj[5] }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section__title">Certifications</div>
+      <div class="section__list">
+        <div class="section__list-item">
+          <div class="name">{{ item.cert[0] }}</div>
+        </div>
+        <div class="section__list-item">
+            <div class="name">{{ item.cert[1] }}</div>
+          </div>
+          <div class="section__list-item">
+            <div class="name">{{ item.cert[2] }}</div>
+          </div>
+          <div class="section__list-item">
+            <div class="name">{{ item.cert[3] }}</div>
+          </div>
+      </div>
+    </div>
+</div>
+</div>
+<div id="button1">
+  <button type="submit" class="submit-button" (click) ="generatePDF()">Download</button>
+</div>

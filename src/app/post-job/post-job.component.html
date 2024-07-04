@@ -1,0 +1,47 @@
+<!--<div>
+    <h1>Welcome</h1>
+    <label>Enter Job Name :</label>
+    <input type="text" name="job" [(ngModel)]="job.jobname"/>
+    <label>Enter Company Name :</label>
+    <input type="text" name="job" [(ngModel)]="job.company"/>
+    <label>Location :</label>
+    <input type="text" name="job" [(ngModel)]="job.location"/>
+    <label>Enter Job Description :</label>
+    <textarea name="job" placeholder="Enter Job Description" required [(ngModel)]="job.jobdescr"></textarea>
+    <button (click)="postJob()">Post Job</button>
+</div>-->
+    <header>
+        <div class="container">
+          <h1>DynamicCV - Post Jobs </h1>
+        </div>
+    </header>
+    <div class="recruiter-page">
+        <div class="job-form">
+            <label for="jobid">Enter Job Id</label>
+            <input type="text" id="jobid" name="jobid" [(ngModel)]="job.jobid" required>
+            <label for="jobName">Enter Job Name</label>
+            <input type="text" id="jobName" name="jobname" [(ngModel)]="job.jobname" required>
+            <label for="companyName">Enter Company Name</label>
+            <input type="text" id="companyName" name="jobcompany" [(ngModel)]="job.company" required>
+            <label for="location">Location</label>
+            <input type="text" id="location" name="jobloctation" [(ngModel)]="job.location" required>
+            <label for="location">Position Type</label>
+            <select id="positionType" name="positionType" [(ngModel)]="job.postype" required>
+              <option value="intern" >Intern</option>
+              <option value="fullTime">Full-time</option>
+              <option value="partTime">Part-time</option>
+            </select>
+            <label for="jobDescription">Enter Job Description</label>
+            <textarea id="jobDescription" name="jobdescr" placeholder="Enter Job Description" required [(ngModel)]="job.jobdescr"></textarea>
+            <label for="jobQualif">Enter Job Qualification</label>
+            <textarea id="jobQualif" name="jobqualif" placeholder="Enter Job Qualification" required [(ngModel)]="job.jobqualif"></textarea>
+            <label for="jobDescription">Last Date of Submission</label>
+            <input type="date" id="ldate" name="jobldate" [(ngModel)]="job.ldate" required>
+            <button (click)="postJob()">Post Job</button>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+      <p>&copy; 2024 DynamicCV. All rights reserved.</p>
+    </div>
+  </footer>

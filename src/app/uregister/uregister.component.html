@@ -1,0 +1,16 @@
+<div class="hero">
+    <div class="form-box">
+        <div class="button-box" >
+            <button class="toggle-btn">User Registration</button>
+        </div>
+        <form id='login1' class="input-group" [formGroup]="registerForm" (ngSubmit)="registerUser()">
+            <input type="text" class="input-field" id="uname" formControlName="uname" placeholder="User Name" required>
+            <input type="email" class="input-field" id="em_id" formControlName="em_id" placeholder="Email Id" required>
+            <input type="tel" class="input-field" pattern="\d{10}" formControlName="ph" placeholder="Phone Number" required>
+            <input type="password" class="input-field" id="ps" formControlName="ps" placeholder="Enter Password" required>
+            <input type="password" class="input-field" id="cps" formControlName="cps" placeholder="Confirm Password" required>
+            <input type="checkbox" class="check-box" ><span class="span2">Accept Terms & Conditions</span>
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+    </div>
+</div>

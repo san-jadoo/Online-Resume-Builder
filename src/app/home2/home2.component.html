@@ -1,0 +1,44 @@
+<body>
+    <header>
+    <div class="container">
+      <h1>DynamicCV - User Login</h1>
+      <nav>
+        <ul>
+          <li><a href="/login" class="logout-link" (click)="navigateTo('/login')">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Welcome, {{email}}</h2>
+      <p>This is your personalized dashboard where you can manage your account.</p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="feature">
+        <h3>Create Resume</h3>
+        <p>Create Your Personalized Resume</p>
+        <br>
+        <div id="button1">
+          <button type="submit" class="submit-button" (click)="navigateTorf('/res-form',email)">Create Resume</button>
+        </div>
+      </div>
+      <div class="feature">
+        <h3>Find Jobs</h3><br>
+        <div id="button1">
+          <button type="submit" class="submit-button" (click)="navigateTovj('/view-jobs',email)">Find Jobs</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 DynamicCV. All rights reserved.</p>
+    </div>
+  </footer>
+</body>

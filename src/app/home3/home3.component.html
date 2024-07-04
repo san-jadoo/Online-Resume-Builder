@@ -1,0 +1,43 @@
+<div class="home">
+    <header>
+    <div class="container">
+      <h1>DynamicCV - Recruiter Login</h1>
+      <nav>
+        <ul>
+          <li><a  class="profile-link" (click)="navigateToup('/update-passR',email)">Change Password</a></li>
+          <li><a href="/login" class="logout-link" (click)="navigateTo('/login')">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="hero">
+    <div class="container">
+      <h2>Welcome, {{email}}</h2>
+      <p></p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="feature">
+        <h3>Post Jobs</h3>
+        <p></p>
+        <button type="submit" class="submit-button" (click)="navigateTosub('/post-job',email)">Post Jobs</button>
+      </div>
+      <div class="feature">
+        <h3>See Posted Jobs</h3>
+        <p></p>
+        <div id="button1">
+          <button type="submit" class="submit-button" (click)="navigateTosub('/job-lists',email)">Posted Jobs</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 DynamicCV. All rights reserved.</p>
+    </div>
+  </footer>
+</div>

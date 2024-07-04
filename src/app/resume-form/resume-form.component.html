@@ -1,0 +1,106 @@
+<header>
+    <div class="ccontainer">
+      <h1>DynamicCV - Resume Form </h1>
+    </div>
+</header>
+<div class="body">
+  <div class="container">
+      <h1>Resume Data</h1>
+      <form #resumeForm="ngForm" class="resume-form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" [(ngModel)]="name" ngModel #uname="ngModel" required>
+            <div *ngIf="uname.invalid && (uname.dirty || uname.touched)" class="text-danger" style="color: red; font-size: 12px;">Name is required</div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" [(ngModel)]="email" ngModel #uemail="ngModel" required email>
+            <div *ngIf="uemail.invalid && (uemail.dirty || uemail.touched)" class="text-danger"style="color: red; font-size: 12px;" >Invalid email format</div>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" [(ngModel)]="phone" ngModel #uphone="ngModel" required pattern="[0-9]{10}">
+            <div *ngIf="uphone.invalid && (uphone.dirty || uphone.touched)" class="text-danger" style="color: red; font-size: 12px;">Phone number must be 10 digits</div>
+        </div>
+          <div class="form-group">
+            <label for="summary">Summary :</label>
+            <input type="text" id="summary" name="summary"  placeholder="Enter a Short Summary about You!" [(ngModel)]="summary" required>
+        </div>
+        <div class="form-group">
+            <label for="position">Experience Section :</label>
+            <div class="experience-fields">
+                <div class="experience-field">
+                    <label for="experience-name">Experience 1 :</label>
+                    <input type="text" id="exp0" name="exp0" [(ngModel)]="exp[0]" placeholder="Enter your position" required>
+                    <input type="text" id="exp1" name="exp1" [(ngModel)]="exp[1]" placeholder="Enter company name" required>
+                    <input type="text" id="exp2" name="exp2" [(ngModel)]="exp[2]" placeholder="Enter duration" required>
+                    <input type="text" id="exp3" name="exp3" [(ngModel)]="exp[3]" placeholder="Enter a Short Summary on Your Role!" required>
+                </div>
+                <div class="experience-field">
+                    <label for="experience-name">Experience 2 :</label>
+                    <input type="text" id="exp0" name="exp4" [(ngModel)]="exp[4]" placeholder="Enter your position" required>
+                    <input type="text" id="exp1" name="exp5" [(ngModel)]="exp[5]" placeholder="Enter company name" required>
+                    <input type="text" id="exp2" name="exp6" [(ngModel)]="exp[6]" placeholder="Enter duration" required>
+                    <input type="text" id="exp3" name="exp7" [(ngModel)]="exp[7]" placeholder="Enter a Short Summary on Your Role!" required>
+                </div>
+            </div>
+        </div>
+          <div class="form-group">
+              <label for="degree">Education Section :</label>
+              <div class="education-fields" >
+                  <div class="education-field" >
+                      <label for="edu">Education 1 :</label>
+                      <input type="text" id="edu0" name="edu0" [(ngModel)]="education[0]" placeholder="Enter your degree" required>
+                      <input type="text" id="edu1" name="edu1" [(ngModel)]="education[1]" placeholder="Enter your Domain of Study" required>
+                      <input type="text" id="edu2" name="edu2" [(ngModel)]="education[2]" placeholder="Enter your College" required>
+                      <input type="text" id="edu3" name="edu3" [(ngModel)]="education[3]" placeholder="Enter your college Location" required>
+                      <input type="text" id="edu4" name="edu4" [(ngModel)]="education[4]" placeholder="Enter your Start and End Year" required>  
+                  </div>
+                  <div class="education-field" >
+                    <label for="edu">Education 2 :</label>
+                    <input type="text" id="edu5" name="edu0" [(ngModel)]="education[5]" placeholder="Enter your degree" required>
+                    <input type="text" id="edu6" name="edu6" [(ngModel)]="education[6]" placeholder="Enter your Domain of Study"required>
+                    <input type="text" id="edu7" name="edu7" [(ngModel)]="education[7]" placeholder="Enter your College"required>
+                    <input type="text" id="edu8" name="edu8" [(ngModel)]="education[8]" placeholder="Enter your College Location" required>
+                    <input type="text" id="edu9" name="edu9" [(ngModel)]="education[9]" placeholder="Enter your Start and End Year" required>  
+                </div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="project-name">Projects Section :</label>
+              <div class="projects-fields" >
+                  <div class="projects-field">
+                      <label for="projectName">Project 1 :</label>
+                      <input type="text" id="proj0" name="proj0" [(ngModel)]="proj[0]" placeholder="Enter project name" required>
+                      <input type="text" id="proj1" name="proj1" [(ngModel)]="proj[1]" placeholder="Enter Year of Completion" required>
+                      <textarea id="proj2" name="proj2" [(ngModel)]="proj[2]" placeholder="Enter project description" required></textarea>
+                  </div>
+                  <div class="projects-field">
+                    <label for="projectName">Project 2 :</label>
+                    <input type="text" id="proj3" name="proj3" [(ngModel)]="proj[3]" placeholder="Enter project name" required>
+                    <input type="text" id="proj4" name="proj4" [(ngModel)]="proj[4]" placeholder="Enter Year of Completion" required>
+                    <textarea id="proj5" name="proj5" [(ngModel)]="proj[5]" placeholder="Enter project description" required></textarea>
+                </div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="certificationName">Certifications Section :</label>
+              <div class="certifications-fields" >
+                  <div class="certification-field">
+                      <label for="certificationName">Certification :</label>
+                      <input type="text" id="cert0" name="cert0" [(ngModel)]="cert[0]" placeholder="Enter certification name,year" required>
+                      <input type="text" id="cert1" name="cert1" [(ngModel)]="cert[1]" placeholder="Enter certification name,year" required>
+                      <input type="text" id="cert2" name="cert2" [(ngModel)]="cert[2]" placeholder="Enter certification name,year" required>
+                      <input type="text" id="cert3" name="cert3" [(ngModel)]="cert[3]" placeholder="Enter certification name,year" required>
+                  </div>
+              </div>
+          </div>
+          <button type="submit" class="submit-button" >Submit</button>
+      </form>
+  </div>
+</div>
+<footer>
+    <div class="ccontainer">
+      <p>&copy; 2024 DynamicCV. All rights reserved.</p>
+    </div>
+</footer>
